@@ -15,3 +15,12 @@ sudo a2dissite 000-default.conf
 sudo systemctl reload apache2
 sudo systemctl restart apache2
 ```
+
+***Data Sources***
+[New Jersey Counties](https://opendata.arcgis.com/datasets/5f45e1ece6e14ef5866974a7b57d3b95_1.geojson)
+sudo ogr2ogr -f "PostgreSQL" PG:"dbname=safety_voyager user=postgres password=GPI2018!" "new_jersey_counties.geojson" -nln county
+
+[New Jersey Municipalties](https://opendata.arcgis.com/datasets/3d5d1db8a1b34b418c331f4ce1fd0fef_2.geojson)
+sudo ogr2ogr -f "PostgreSQL" PG:"dbname=safety_voyager user=postgres password=GPI2018!" "new_jersey_municipalities.geojson" -nln municipality
+
+
