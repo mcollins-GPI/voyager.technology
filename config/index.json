@@ -1,0 +1,31 @@
+{
+  "db": "postgres://postgres:GPI2018!@127.0.0.1/pinellas",
+  "cache": 3600,
+  "port": 3003,
+  "swagger": {
+    "basePath": null,
+    "externalDocs": {
+      "url": "https://github.com/tobinbradley/dirt-simple-postgis-http-api",
+      "description": "Source code on Github"
+    },
+    "info": {
+      "title": "Pinellas Crash API",
+      "description": "Utilizes a PostGIS database to server web maps.",
+      "version": "3"
+    },
+    "schemes": [
+      "http",
+      "https"
+    ],
+    "tags": [{
+      "name": "api",
+      "description": "code related end-points"
+    }, {
+      "name": "feature",
+      "description": "features in common formats for direct mapping."
+    }, {
+      "name": "meta",
+      "description": "meta information for tables and views."
+    }]
+  }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request data from a remote server - 4.15</title>
+</head>
+
+<body>
+    <label for="progressBar">Downloading progress:</label>
+    <progress id="progressBar" value="0" max="783660" title="0%"> 0% </progress>
+    <script>
+        const crashDetailURL = 'https://apps.tindaleoliver.com/arcgis/rest/services/D7_CDMS/MapServer/1/query?';
+        const progressBar = document.getElementById('progressBar');
+        const totalRecords = 783660;
+        const recordsToReturn = 100;
+        const csvOutputIncrement = 5000;
+        const startingRecord = 780000;
+        var fields;
+        var csvContent = "data:text/csv;charset=utf-8,";
+        var params = new URLSearchParams(filter).toString();
+        var filter = {
+            where: '1=1',
+            text: '',
+            objectIds: '',
+            time: '',
+            geometry: '',
+            geometryType: 'esriGeometryEnvelope',
+            inSR: '',
+            spatialRel: 'esriSpatialRelIntersects',
+            relationParam: '',
+            outFields: '*',
+            returnGeometry: true,
+            returnTrueCurves: false,
+            maxAllowableOffset: '',
+            geometryPrecision: '',
+            outSR: '',
+            returnIdsOnly: false,
+            returnCountOnly: false,
+            orderByFields: '',
+            groupByFieldsForStatistics: '',
+            outStatistics: '',
+            returnZ: false,
+            returnM: false,
+            gdbVersion: '',
+            returnDistinctValues: false,
+            resultOffset: 0,
+            resultRecordCount: 100,
+            f: 'json'
+        };
+
+        progressBar.max = totalRecords;
+        filter.resultOffset = startingRecord;
+
+        function range(start, end, jump) {
+            var array = [];
+
+            for (let i = start; i <= end; i += jump) {
+                array.push(i);
+            }
+
+            return array
+        }
+        function outputRecords(csvContent) {
+            var encodedUri = encodeURI(csvContent);
+            var link = document.createElement('a');
+            link.setAttribute('href', encodedUri);
+            link.setAttribute('download', `crashLocations-${filter.resultOffset + filter.resultRecordCount}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            
+            return "data:text/csv;charset=utf-8,";
+        }
+        function getCrashRecords(url, recordStart = 0){
+            params = new URLSearchParams(filter).toString();
+            fetch(url + params)
+                .then(response => response.json())
+                .then(data => {
+                    if (csvContent === 'data:text/csv;charset=utf-8,') {
+                        fields = data.fields.map(field => field.name);
+                        csvContent += fields.join(',') + '\n';
+                    }
+                    
+                    data.features.forEach(feature => {
+                        var lineString = '';
+                        fields.forEach(field => {
+                            var value = feature.attributes[field];
+                            if (lineString === '') {
+                                lineString += (typeof value === 'number' ? value : '"' + value + '"');
+                            } else {
+                                lineString += ',' + (typeof value === 'number' ? value : '"' + value + '"');
+                            }
+                        });
+                        csvContent += lineString + '\n';
+                    });
+
+                    if (range(recordStart, totalRecords, csvOutputIncrement).indexOf(filter.resultOffset + filter.resultRecordCount) > 0) {
+                        csvContent = outputRecords(csvContent);
+                    }
+
+                    filter.resultOffset += recordsToReturn;
+                    progressBar.value = filter.resultOffset;
+                    progressBar.innerHTML = `${filter.resultOffset / totalRecords}%`;
+                    progressBar.title = `${filter.resultOffset / totalRecords}%`;
+
+                    if (filter.resultOffset < totalRecords) {
+                        getCrashRecords(url);
+                    } else {
+                        outputRecords(csvContent);
+                    }
+                });
+        }
+
+        getCrashRecords(crashDetailURL, startingRecord);
+    </script>
+</body>
+</html>

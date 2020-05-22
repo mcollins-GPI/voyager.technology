@@ -1,0 +1,1224 @@
+﻿html,
+body,
+#map {
+    font-family: Arial !important;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+input {
+    outline: none;
+
+}
+input[type=number] {
+    -moz-appearance: textfield;
+    box-shadow:none !important;
+}
+input[type=date] {
+    -moz-appearance: textfield;
+    box-shadow: none !important;
+    width: 100px;
+    border: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: orange;
+}
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+
+    /*fix for FF unable to apply focus style bug */
+    border: 1px solid white;
+
+    /*required for proper track sizing in FF*/
+    width: auto;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 9px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+
+div:focus {
+    background-color: Aqua;
+}
+
+select {
+    width: 200px;
+}
+
+#gpiLogoContainer {
+    z-index:4;
+    height: 40px;
+    width: 150px;
+    position: absolute;
+    right: 13px;
+    bottom: 20px;
+    background-color: white;
+    background-image: url(../img/gpiLogo.png);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #4C4C4C;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.redButtonToggle {
+    background-color: red !important;
+    transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease
+}
+.whiteButtonToggle {
+    background-color: white !important;
+    transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease
+}
+.greenButtonToggle {
+    background-color: #73dbc4 !important;
+    transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease
+}
+.orangeButtonToggle {
+    background-color: #dbc473 !important;
+    transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease
+}
+
+.hidden {
+    display: none !important;
+}
+.disabled {
+    background-color: slategray !important;
+    pointer-events: none !important;
+    cursor: default !important;
+}
+.functionalityButton.disabled {
+    background-color: lightgray !important;
+    pointer-events: none;
+}
+
+
+.hideMap {
+    display: none;
+}
+.noUnderline {
+    text-decoration: none;
+}
+
+
+#homeButton{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 32px;
+    width: 32px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-image: url('../img/homeButton.png');
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 100;
+
+}
+
+
+#searchDiv {
+    position: absolute;
+    z-index: 20;
+    top: 15px;
+    left: 62px;
+}
+#searchOmniBox {
+    width: 320px;
+    height: 32px;
+    left: 62px;
+    -webkit-border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
+}
+#searchInput {
+    border-width: 0px;
+    border: none;
+    margin-top: 1px;
+    margin-left: 5px;
+    height: 29px;
+    width: 311px;
+    padding-left: 3px;
+    vertical-align: middle;
+    font-size: 1.2em;
+}
+#searchOmniBoxSearchType {
+    width: 32px;
+    left: 382px;
+    border-left: none;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    background-image: url('../img/omniSelector.png');
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.omniElement {
+    height: 32px;
+    position: absolute;
+    background-color: white;
+    top: 15px;
+    border: 1px solid #4C4C4C;
+    cursor: pointer;
+}
+
+.roundedBottom {
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 0 5px 5px;
+}
+
+.searchHanger {
+    position: absolute;
+    top: 47px;
+    left: 66px;
+    width: 344px;
+    border: none;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 0 5px 5px;
+}
+
+.searchTypeOptions {
+    height: 62px;
+    /*width: 260px;*/
+    padding-right: 15px;
+    background-color: #4C4C4C;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+.searchTypeOptionsButton {
+    padding: 0;
+    border: 1px solid #57585A;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 15px 0 15px 15px;
+    height: 32px;
+    width: 32px;
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    float: left;
+    pointer-events: all;
+}
+.searchTypeOptionsButton.resetFilters {
+    background-image: url(../img/clearAllFilters.png);
+    background-size: 24px;
+}
+.searchTypeOptionsButton.countyFilter {
+    background-image: url(../img/countyIcon.png);
+    background-size: 24px;
+}
+.searchTypeOptionsButton.stateRouteFilter {
+    background-image: url(../img/signIcon.png);
+    background-size: 24px;
+}
+.searchTypeOptionsButton.municipalityFilter {
+    background-image: url(../img/cityButton.png);
+    background-size: 24px;
+}
+.searchTypeOptionsButton.caseNumberFilter {
+    background-image: url(../img/caseNumberIcon.png);
+    background-size: 26px;
+}
+.searchTypeOptionsButton.googlePlaceFilter {
+    background-image: url(../img/keyword.png);
+    background-size: 26px;
+}
+.searchOmniBoxResults {
+    height: auto;
+    /*width: 100%;*/
+    border: 1px solid #4C4C4C;
+    border-top: none;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 0 5px 5px;
+    background-color: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    pointer-events: all;
+}
+.searchOmniBoxResultElement {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    border: none;
+    height: auto;
+    padding: 0.25em;
+    font-size: small;
+}
+.searchOmniBoxResultElement:nth-child(2n+1) {
+    background-color: lightgray;
+}
+.searchOmniBoxResultElement:last-child {
+    padding-bottom: 0.25em;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 0 5px 5px;
+}
+.searchOmniBoxResultElement:hover {
+    font-weight: bold;
+}
+
+#resultsGridDiv {
+    margin: 15px 0 15px 64px;
+    height: 244px;
+    font-size: small;
+    clear: left;
+}
+
+
+#clusterGridDiv {
+    margin: 15px 0 0 64px;
+    height: 244px;
+    font-size: small;
+    clear: left;
+}
+
+
+#areaGraphDiv {
+    margin: 10px 0 0 64px;
+    padding-right: 60px;
+    height: 300px;
+    /*width: 100%;*/
+    display: block;
+    background-color: white;
+    font-size: small;
+    clear: left;
+
+}
+
+#resultsButton {
+    z-index: 6;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    left: 15px;
+    bottom: 28px;
+    background-color: white;
+    background-image: url(../img/results.png);
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #4C4C4C;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+#resultsDiv {
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background-color: rgba(76, 76, 76, 0.5);
+    border-top: 1px solid rgba(76, 76, 76, 1);
+    opacity: 0;
+}
+.resultsFunctionality {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 64px;
+    pointer-events: none;
+}
+.resultsFunctionalityButton {
+    padding: 0;
+    border: 1px solid #57585A;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 0 0 15px 15px;
+    height: 32px;
+    width: 32px;
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#dataExport {
+    background-image: url(../img/export.png);
+    background-size: 26px;
+}
+
+#dlnExport {
+    background-image: url(../img/dlnexport.png);
+    background-size: 26px;
+}
+
+#exportToExcel {
+    background-image: url(../img/excelImage.png);
+    background-size: 26px;
+}
+#reportOne {
+    background-image: url(../img/report1.png);
+    background-size: 34px;
+}
+#reportTwo{
+    background-image: url(../img/report2.png);
+    background-size: 24px;
+}
+
+
+#areaReportButton
+{
+    background-image: url(../img/analysis.png);
+    background-size: 23px;
+}
+
+.field-detailLink {
+    width: 100px;
+}
+.columnChooser {
+    background-image: url(../img/columnChooser.png);
+    background-size: 24px;
+}
+
+
+
+/*Filter Menu Style Rules*/
+#filterMenuToggle {
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    right: 13px;
+    top: 16px;
+    background-color: white;
+    background-image: url(../img/filter.png);
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #57585A;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 20;
+    cursor: pointer;
+}
+#filtersDiv {
+    content:" ";
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    background-color: rgba(76, 76, 76, 0.5);
+    /*border-left: 1px solid rgba(76, 76, 76, 1);*/
+    display: none;
+    opacity: 0;
+    padding-top: 64px;
+    overflow: hidden;
+}
+
+#test {
+    content:" ";
+    background-color: rgba(76, 76, 76, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100px;
+}
+
+#filtersDivBorder {
+    content:" ";
+    background-color: rgba(76, 76, 76, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1px;
+}
+
+#locationFilter {
+    background-image: url(../img/locationFilter.png);
+    background-size: 20px;
+}
+#jurisdictionFilter {
+    background-image: url(../img/countyIcon.png);
+    background-size: 20px;
+}
+#dateFilter {
+    background-image: url(../img/calendar.png);
+    background-size: 20px;
+}
+
+#crashMagnitudeFilter {
+    background-image: url(../img/crashMag.png);
+    background-size: 20px;
+}
+#crashDirectionFilter {
+    background-image: url(../img/crashDirectionFilter.png);
+    background-size: 24px;
+}
+#crashTypeFilter {
+    background-image: url(../img/crashType.png);
+}
+#roadConditionFilter {
+    background-image: url(../img/roadCondition.png);
+}
+#physicalConditionFilter {
+    background-image: url(../img/physicalCondition.png);
+}
+#physicalStatusFilter {
+    background-image: url(../img/physicalStatus.png);
+    background-size: 26px;
+}
+#pedestrianCyclistFilter {
+    background-image: url(../img/bikePed.png);
+}
+#roadMedianFilter {
+    background-image: url(../img/medianType.png);
+}
+#trafficControlFilter {
+    background-image: url(../img/trafficControl.png);
+}
+#advancedFilter {
+    background-image: url(../img/advancedFilter.png);
+}
+#clearAllFilters {
+    background-image: url(../img/clearAllFilters.png);
+    background-size: 24px;
+}
+
+#updatesButton {
+    z-index:100;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    right: 13px;
+    bottom: 28px;
+    background-color: white;
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #4C4C4C;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#updatesBox {
+    width: 250px;
+    background-color:white;
+    position: absolute;
+    bottom: 28px;
+    right: 58px;
+    z-index: 999;
+    border-radius: 5px;
+    display:none;
+    border: 1px solid #4C4C4C;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#updatesBoxHeader {
+    padding-left:10px;
+    background-color: #dbc473;
+    height: 32px;
+    line-height: 32px;
+    cursor: default;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+#updatesBoxContent {
+    padding: 10px 15px 10px 15px;
+    font-size:14px;
+    overflow: auto;
+}
+#updatesBox .confirmButton {
+    background-color: gray;
+    color: whitesmoke;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    font-size: 13px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 5px 10px 10px 10px;
+
+}
+
+.crashFilterFlyout {
+    width: 300px;
+    position: absolute;
+    right: 77px;
+    background-color:lightgray;
+    /*border: 1px solid lightgray;*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    z-index: 21;
+    display: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.crashFilterFlyout * {
+     pointer-events: all;
+}
+.crashFilterFlyoutHeader {
+    vertical-align: middle;
+    background-color: #dbc473;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 0.3em;
+    cursor: default;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+.crashFilterFlyoutSubHeader {
+    vertical-align: middle;
+    background-color: #dbc473;
+    padding: 0.1em 0.5em;
+    cursor: default;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+.crashFilterFlyout .deleteButton {
+    background-color: gray;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+
+     -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.filterTable {
+    width:100%;
+    margin: 0;
+    padding: 0;
+    border-spacing: .3em .3em;
+    font-size: small;
+    color: lightgray;
+    border-collapse: separate;
+
+}
+.filterIconButton {
+    padding: 0;
+    border: 1px solid #57585A;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 0 0 15px 13px;
+    height: 32px;
+    width: 32px;
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.filterTextButton {
+    margin: 4px;
+    padding: 0.1em 0.5em;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    width: auto;
+    cursor: pointer;
+}
+.filterCheckButton.crashFilterSelected {
+    background-image: url(../img/checkMark.png);
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.filterCheckButton.crashFilterWorking {
+    background-image: url(../img/simpleSpinner.gif) !important;
+    background-size: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.filterDescription {
+    margin: 4px;
+    color: #4C4C4C;
+    padding: 0.1em 0.5em;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.filterCheckButton {
+    margin: 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+}
+
+
+.filterTextBox:first-child {
+    margin: 15px 5px 16px 64px;
+}
+.filterTextBox {
+    min-height: 15px;
+    background-color: #73dbc4;
+    margin: 15px 0 5px 0;
+    font-size: small;
+    padding: 8px;
+    float: left;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(76, 76, 76, 1);
+}
+
+.filterDisable {
+    background-color: grey;
+}
+
+.areaCrashChart {
+    position: relative;
+    float: left;
+    width: 450px;
+    padding-right: 5px;
+}
+.areaCrashChartLegend{
+    float: left;
+}
+
+.areaCrashChartOverlay{
+    z-index: 100;
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    background: lightgray;
+    opacity: 0.5;
+    background-image: url(../img/simpleSpinner.gif);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.settingsPane {
+    position: absolute;
+    z-index: 4;
+    top: 205px;
+    left: 0;
+    width: 61px;
+    background-color: rgba(76, 76, 76, 0.5);
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid rgba(76, 76, 76, 1);
+    border-left: none;
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+.settingsIconButtonFirst {
+    padding: 0;
+    border: 1px solid #57585A;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 60px 0 15px 15px;
+    height: 30px;
+    width: 30px;
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+        pointer-events: all;
+}
+.settingsIconButton {
+    padding: 0;
+    border: 1px solid #57585A;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 0 0 15px 13px;
+    height: 32px;
+    width: 32px;
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+        pointer-events: all;
+}
+
+.settingsToggleButton {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 15px;
+    top: 220px;
+    background-color: white;
+    background-image: url(../img/settingsToggleButton.png);
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #57585A;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 20;
+    cursor: pointer;
+}
+.selectionToggleButton {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 15px;
+    top: 570px;
+    background-color: white;
+    background-image: url(../img/polygonIco.png);
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #57585A;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 20;
+    cursor: pointer;
+}
+.dimensionToggleButton {
+    background-image: url(../img/dimensionToggleButton.png);
+}
+.basemapToggleButton {
+    background-image: url(../img/hybridGraphic.png);
+    background-size: auto;
+}
+.reportSelectionButton {
+    background-image: url(../img/reportSelectIcon.png);
+    background-size: 20px;
+}
+#hexmapToggleButton {
+    background-image: url(../img/hexmapGraphic.png);
+    background-size: 43px;
+}
+
+#ballBankToggleButton {
+    background-image: url(../img/ballBanking.png);
+    background-size: 26px;
+}
+
+#aadtToggleButton {
+    background-image: url(../img/aadtIcon.png);
+    background-size: 26px;
+}
+#crashLocationsToggleButton {
+    background-image: url(../img/crashLocation.png);
+    background-size: 26px;
+}
+
+#helpButton {
+    background-image: url(../img/helpButton.png);
+    background-size: 14px;
+}
+
+#tiltToggleButton {
+    background-image: url(../img/hexmapGraphic.png);
+    background-size: 43px;
+    display: none;
+}
+
+
+.working {
+    background-image: url(../img/simpleSpinner.gif) !important;
+    background-size: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hybridSelected {
+    background-image: url(../img/topoGraphic.png);
+    background-size: auto;
+}
+.hexmapSelected {
+    background-image: url(../img/topoGraphic.png) !important;
+    background-size: auto;
+}
+/*.esri-attribution {
+    margin-left: 50px;
+}
+.esri-logo {
+    margin-right: 62px;
+}*/
+
+.esri-ui-top-left {
+    top: 45px;
+}
+
+.esri-legend {
+    top:100px;
+    left:20px;
+}
+
+
+#milePostRowInput{
+    width: 100%;
+
+}
+
+.milePostResult{
+    height: 20px;
+    padding: 2px 0 0 4px;
+    margin: 0;
+    text-align: left;
+    width: 33px !important;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
+.milePostResult:hover {
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    background-color: #dbc473;
+}
+
+.milePostRow{
+    height: 33px;
+    overflow:hidden;
+}
+
+.locationFilterRootContainer {
+    padding: 0;
+    margin: 0;
+    color: #4C4C4C;
+    border-spacing: 4px;
+    font-size: small;
+    border-collapse: separate;
+    width: 100%;
+}
+
+.locationFilterCell {
+    width: 33px !important;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+.locationFilterCell.disabled {
+    cursor: not-allowed !important;
+}
+
+
+.locationFilterRootContainer input {
+    width: 79px;
+    height: 29px;
+    border: none;
+    padding-left: 0.25em;
+}
+.locationFilterRootContainer .functionalityButton {
+    background-color: #dbc473;
+}
+.locationFilterRootContainer .rowLabel {
+    background-color: gray;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+#dateSelectionRootContainer {
+    padding: 0;
+    margin: 0;
+    color: #4C4C4C;
+    border-spacing: 4px;
+    font-size: small;
+    border-collapse: separate;
+}
+#dateSelectionRootContainer tr {
+    height: 33px;
+    overflow:hidden;
+}
+#dateSelectionRootContainer td {
+    width: 33px !important;
+    overflow:hidden;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+#dateSelectionRootContainer td:not(.selectedYear):hover {
+    font-weight: bold;
+    background-color: #dbc473 !important;
+    transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease
+
+}
+#dateSelectionRootContainer .functionalityButton {
+    background-color: #dbc473;
+}
+#dateSelectionRootContainer .rowLabel {
+    background-color: gray;
+    color: whitesmoke;
+    font-weight: bold;
+}
+#dateSelectionRootContainer .placeHolder {
+    visibility: hidden;
+}
+#dateSelectionRootContainer select{
+    font-size: 13px;
+    text-align: center;
+    height: 31px;
+    width: 62px;
+    border: 1px solid white;
+    background: transparent none repeat scroll 0% 0%;
+    padding: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+#dateSelectionRootContainer select::-ms-expand { /* for IE 11 */
+    display: none;
+}
+#dateSelectionRootContainer .dayDisplay {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 8px;
+    vertical-align: middle;
+    float: left;
+    background-color: #73dbc4;
+    background-clip: padding-box; /* this has been added */
+}
+
+#dateSelectionRootContainer .timeDisplay {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 8px;
+    vertical-align: middle;
+    float: left;
+    background-color: orange;
+    background-clip: padding-box; /* this has been added */
+}
+
+
+.customRow{
+    width: 100px;
+
+}
+
+
+
+.daySelectRow {
+    height: 0px !important;
+}
+
+#startTime {
+    background-color: #73dbc4;
+    padding: 0;
+}
+
+#testButton {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    z-index: 100;
+    visibility: hidden;
+}
+
+.detailPlot {
+    float: left;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+}
+.detailGrid {
+    clear: left;
+    background-color: white;
+}
+.detailGridLabel {
+    float: left;
+    width: 200px;
+    background-color: white;
+    text-align: center;
+}
+
+.disclaimerContent {
+    text-align: justify;
+}
+
+.disclaimerButton {
+    width: 100%;
+}
+
+.downloadParagraph{
+    margin-bottom: 1em;
+
+}
+
+
+.fullSpan {
+    width: 100%;
+    clear: both;
+}
+
+.columnChooser .dijitDialogPaneContent {
+    padding: 0;
+    background-color: white;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+.error {
+    background-color: salmon !important;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

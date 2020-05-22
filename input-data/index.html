@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+
+    <title>Visualize points with a heatmap - 4.15</title>
+
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.15/esri/themes/light/main.css"
+    />
+
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
+    <script src="https://js.arcgis.com/4.15/"></script>
+
+    <script>
+      require([
+        "esri/Map",
+        "esri/layers/FeatureLayer",
+        "esri/views/MapView",
+        "esri/widgets/Legend"
+      ], function(Map, FeatureLayer, MapView) {
+        var layer = new FeatureLayer({
+            url: 'https://apps.tindaleoliver.com/arcgis/rest/services/Pinellas_CDMS/MapServer/1',
+            renderer: {
+              type: "heatmap",
+              blurRadius: 2
+            }
+        });
+
+        const map = new Map({
+          basemap: "gray",
+          layers: [layer]
+        });
+
+
+        const view = new MapView({
+          container: "viewDiv",
+          center: [-82.7779, 27.8764],
+          zoom: 12,
+          map: map
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>

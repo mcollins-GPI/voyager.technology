@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for x in $(ls crashLocations-*.csv);
+do
+    lineCount=$(wc -l < /home/ubuntu/data/forwardPinellas/$x)
+    if [ $lineCount = 5001 ]
+    then
+        mv /home/ubuntu/data/forwardPinellas/$x good
+        do psql -c "copy crash(HSMV,EventCrashDate,EventCrashTime,EventOnStreet,EventCrossStreet,EventDD_X,EventDD_Y,EventSource_XY,EventNodeDescription,EventCounty,TotalFatalities,TotalInjuries,HighestSeverity,Fatal,Incapacitating,NonIncapacitating,PossibleInjury,Pedestrian,Bike,Intoxication,Speeding,DisregardControl,WorkZone,NoLighting,SHSP_VulnerableUser,SHSP_AgrDriving,SHSP_LaneDeparture,SHSP_Intersetion,Veh1AgeCatagory1,Veh1AgeCatagory2,Angle,RearEnd,LeftTurn,RightTurn,HeadOn,Sideswipe,SignalizeStop,CloseMedian,ProtectetLeftTurn,AccessMgmtReview,RoadFriction,RunOffRoad,HeavyTruck,Prohibit_UTurns,MotorCycle,CuveSignage,UnpavedShoulder,NonTypicalGeometry,AnimalInvolved,ElectronicDistraction,SegmentID,AADT,CD_Main,CD_Link,CD_Edit,CD_Symbology,GID,EventCrashNode,EventCrashYear,EventCrashDay,EventCrashMonth,EventCrashHour,EventAddress,EventCItyCode,EventJurisdiction,EventRoadwayID,EventMP,EventDirectionFmInt,EventDistanceFmInt,EventRelationtoIntersection,EventImpactType,EventNonVehicularCollision,EventHitandRun,EventLocationOnRoadway,EventLightingCondition,EventWeatherCondition,EventEnvironmentalCondition,EventWorkZone,EventReportingAgencyType,EventReportingAgencyName,EventReportingCaseNumber,EventFormType,PropertyDamageAmount,SHSP_Distracted,SHSP_Teen,SHSP_Aging,SHSP_Impaired,HitTree,Bridge,SeverityFactor,RoadSurfaceCondition,Driver1CCause,NodeDD_X,NodeDD_Y,WrongWay,Guardrail,Fire_Explosion,Water_Immersion,Signalized,Interstate,SHSP_Commercial,SHSP_NoRestraint,TotalSeriousInjuries,NightTime,RoadSystemType,OnOffSystem,CrashType,Driver1Age,Driver1Sex,Driver1Injury,Driver1CCauseSub,Driver1Condition,Driver1VisionObstruct,Driver1Distraction,Driver1AlcoholUse,Driver1DrugUse,Driver1Restraint,Driver1SafetyEquip,Driver2Age,Driver2Sex,Driver2Injury,Driver2CCause,Driver2CCauseSub,Driver2Condition,Driver2VisionObstruct,Driver2Distraction,Driver2AlcoholUse,Driver2DrugUse,Driver2Restraint,Driver2SafetyEquip,NonMotorist1Age,NonMotorist1Sex,NonMotorist1Injury,NonMotorist1Desc,NonMotorist1Location,NonMotorist1Action,NonMotorist1Cause,NonMotorist1CauseSub,NonMotorist1AlcoholUse,NonMotorist1DrugUse,NonMotorist1SafetyEquip,NonMotorist2Age,NonMotorist2Sex,NonMotorist2Injury,NonMotorist2Desc,NonMotorist2Location,NonMotorist2Action,NonMotorist2Cause,NonMotorist2CauseSub,NonMotorist2AlcoholUse,NonMotorist2DrugUse,NonMotorist2SafetyEquip,TotalIncapInjuries,TotalNonIncapInjuries,TotalPossibleInjuries,Vehicle1Direction,Vehicle1Movement,Vehicle1Type) from '/home/ubuntu/data/forwardPinellas/good/$x' csv headers" pinellas postgres;
+    else
+        mv /home/ubuntu/data/forwardPinellas/$x bad
+    fi
+
+done

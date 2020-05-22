@@ -1,0 +1,11 @@
+[Unit]
+Description=Voyager Pinellas API
+After=network-online.target
+
+[Service]
+Restart=on-failure
+WorkingDirectory=/home/ubuntu/pinellas
+ExecStart=/usr/bin/node /home/ubuntu/pinellas/index.js
+
+[Install]
+WantedBy=multi-user.target

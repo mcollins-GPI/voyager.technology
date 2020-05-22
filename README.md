@@ -22,5 +22,3 @@ sudo ogr2ogr -f "PostgreSQL" PG:"dbname=safety_voyager user=postgres password=GP
 
 [New Jersey Municipalties](https://opendata.arcgis.com/datasets/3d5d1db8a1b34b418c331f4ce1fd0fef_2.geojson)
 sudo ogr2ogr -f "PostgreSQL" PG:"dbname=safety_voyager user=postgres password=GPI2018!" "new_jersey_municipalities.geojson" -nln municipality
-
-
