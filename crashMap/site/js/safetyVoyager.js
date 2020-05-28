@@ -10,227 +10,106 @@
         }
     ]
 },[
-    // "esri/Camera",
-    // "esri/core/watchUtils",
-    // //"esri/core/Scheduler",
-    // "esri/core/urlUtils",
-    // "esri/Map",
-    // "esri/widgets/Search",
-    // "esri/widgets/Search/SearchViewModel",
-    // "esri/geometry/Extent",
-    // "esri/geometry/Point",
-    // "esri/layers/MapImageLayer",
-    // "esri/layers/FeatureLayer",
-    // "esri/layers/support/Sublayer",
-    // "esri/geometry/Polygon",
-    // "esri/geometry/Polyline",
-    // "esri/geometry/SpatialReference",
-    // "esri/geometry/support/webMercatorUtils",
-    // "esri/Graphic",
-    // "esri/identity/IdentityManager",
-    // "esri/identity/ServerInfo",
-    // "esri/layers/GeoJSONLayer",
-    // "esri/layers/GraphicsLayer",
-    // "esri/layers/VectorTileLayer",
-    // "esri/layers/support/FeatureReductionCluster",
-    // "esri/layers/support/LabelClass",
-    // "esri/PopupTemplate",
-    // "esri/renderers/SimpleRenderer",
-    // "esri/request",
-    // "esri/symbols/ObjectSymbol3DLayer",
-    // "esri/symbols/PictureMarkerSymbol",
-    // "esri/symbols/PointSymbol3D",
-    // "esri/symbols/SimpleFillSymbol",
-    // "esri/symbols/SimpleLineSymbol",
-    // "esri/symbols/SimpleMarkerSymbol",
-    // "esri/symbols/TextSymbol",
-    // "esri/symbols/PolygonSymbol3D",
-    // "esri/symbols/ExtrudeSymbol3DLayer",
-    // "esri/tasks/Locator",
-    // "esri/tasks/QueryTask",
-    // "esri/tasks/support/Query",
-    // "esri/views/MapView",
-    // "esri/views/2d/draw/Draw",
-    // "esri/views/SceneView",
-    // "esri/widgets/Compass",
-    // "esri/widgets/LayerList",
-    // "esri/widgets/Legend",
-    "dgrid/Grid",
-    "https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js",
-    "dijit/ConfirmDialog",
-    "dijit/Dialog",
-    "dijit/dijit",
-    "dijit/form/Button",
-    "dijit/form/CheckBox",
-    "dijit/form/DateTextBox",
-    "dijit/form/NumberSpinner",
-    "dijit/form/RadioButton",
-    "dijit/form/HorizontalSlider",
-    "dijit/form/HorizontalRule",
-    "dijit/form/HorizontalRuleLabels",
-    "dijit/form/TimeTextBox",
-    "dijit/layout/AccordionContainer",
-    "dijit/layout/BorderContainer",
-    "dijit/layout/ContentPane",
-    "dijit/layout/TabContainer",
-    "dojo/_base/Color",
-    "dojo/_base/event",
-    "dojo/_base/fx",
-    "dojo/dnd/Moveable",
-    "dojo/dom",
-    "dojo/dom-attr",
-    "dojo/dom-class",
-    "dojo/dom-construct",
-    "dojo/dom-geometry",
-    "dojo/dom-style",
-    "dojo/fx",
-    "dojo/fx/Toggler",
-    "dojo/mouse",
-    "dojo/on",
-    "dojo/promise/all",
-    "dojo/query",
-    "dojo/store/Memory",
-    "dojo/window",
-    "dojox/form/RangeSlider",
-    "dojox/layout/FloatingPane",
-    "dojox/charting/Chart",
-    "dojox/charting/axis2d/Default",
-    "dojox/charting/plot2d/Lines",
-    "dojox/charting/plot2d/Pie",
-    "dojox/charting/plot2d/ClusteredColumns",
-    "dojox/charting/action2d/Highlight",
-    "dojox/charting/action2d/MoveSlice",
-    "dojox/charting/action2d/Tooltip",
-    "dojox/charting/widget/Legend",
-    "dojox/charting/widget/SelectableLegend",
-    "dojox/charting/themes/Julie",
-    "dojox/charting/themes/MiamiNice",
-    "dojo/NodeList-traverse",
-    "dojox/widget/Standby",
-    "dojo/domReady!"
+    'dgrid/Grid',
+    'https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js',
+    'dijit/ConfirmDialog',
+    'dijit/Dialog',
+    'dijit/dijit',
+    'dijit/form/Button',
+    'dijit/form/CheckBox',
+    'dijit/form/DateTextBox',
+    'dijit/form/NumberSpinner',
+    'dijit/form/RadioButton',
+    'dijit/form/HorizontalSlider',
+    'dijit/form/HorizontalRule',
+    'dijit/form/HorizontalRuleLabels',
+    'dijit/form/TimeTextBox',
+    'dijit/layout/AccordionContainer',
+    'dijit/layout/BorderContainer',
+    'dijit/layout/ContentPane',
+    'dijit/layout/TabContainer',
+    'dojo/_base/Color',
+    'dojo/_base/event',
+    'dojo/_base/fx',
+    'dojo/dnd/Moveable',
+    'dojo/dom',
+    'dojo/dom-attr',
+    'dojo/dom-class',
+    'dojo/dom-construct',
+    'dojo/dom-geometry',
+    'dojo/dom-style',
+    'dojo/fx',
+    'dojo/fx/Toggler',
+    'dojo/mouse',
+    'dojo/on',
+    'dojo/promise/all',
+    'dojo/query',
+    'dojo/store/Memory',
+    'dojo/window',
+    'dojox/form/RangeSlider',
+    'dojox/layout/FloatingPane',
+    'dojox/charting/Chart',
+    'dojox/charting/axis2d/Default',
+    'dojox/charting/plot2d/Lines',
+    'dojox/charting/plot2d/Pie',
+    'dojox/charting/plot2d/ClusteredColumns',
+    'dojox/charting/action2d/Highlight',
+    'dojox/charting/action2d/MoveSlice',
+    'dojox/charting/action2d/Tooltip',
+    'dojox/charting/widget/Legend',
+    'dojox/charting/widget/SelectableLegend',
+    'dojox/charting/themes/Julie',
+    'dojox/charting/themes/MiamiNice',
+
+    'dojo/NodeList-traverse',
+    'dojox/widget/Standby',
+    'dojo/domReady!'
 ], function (
-    // Camera,
-    // watchUtils,
-    // //Scheduler,
-    // urlUtils,
-    // Map,
-    // Search,
-    // SearchViewModel,
-    // Extent,
-    // Point,
-    // MapImageLayer,
-    // FeatureLayer,
-    // Sublayer,
-    // Polygon,
-    // Polyline,
-    // SpatialReference,
-    // webMercatorUtils,
-    // Graphic,
-    // esriId,
-    // ServerInfo,
-    // GeoJSONLayer,
-    // GraphicsLayer,
-    // VectorTileLayer,
-    // FeatureReductionCluster,
-    // LabelClass,
-    // PopupTemplate,
-    // SimpleRenderer,
-    // esriRequest,
-    // ObjectSymbol3DLayer,
-    // PictureMarkerSymbol,
-    // PointSymbol3D,
-    // SimpleFillSymbol,
-    // SimpleLineSymbol,
-    // SimpleMarkerSymbol,
-    // TextSymbol,
-    // PolygonSymbol3D,
-    // ExtrudeSymbol3DLayer,
-    // Locator,
-    // QueryTask,
-    // superQuery,
-    // MapView,
-    // Draw,
-    // SceneView,
-    // Compass,
-    // LayerList,
-    // MapLegend,
+
     Grid,
     mapboxgl,
-    ConfirmDialog,
-    Dialog,
-    dijit,
-    Button,
-    CheckBox,
-    DateTextBox,
-    NumberSpinner,
-    RadioButton,
-    HorizontalSlider,
-    HorizontalRule,
-    HorizontalRuleLabels,
-    TimeTextBox,
-    AccordionContainer,
-    BorderContainer,
-    ContentPane,
-    TabContainer,
-    Color,
-    event,
-    fx,
+    ConfirmDialog, Dialog, dijit, Button, CheckBox, DateTextBox, NumberSpinner, RadioButton, HorizontalSlider, HorizontalRule, HorizontalRuleLabels, TimeTextBox, AccordionContainer, BorderContainer, ContentPane, TabContainer,
+    Color, event, fx,
     move,
-    dom,
-    domAttr,
-    domClass,
-    domConstruct,
-    domGeom,
-    domStyle,
-    coreFx,
-    Toggler,
+    dom, domAttr, domClass, domConstruct, domGeom, domStyle,
+    coreFx, Toggler,
     mouse,
     on,
     all,
     query,
     Memory,
     win,
-    RangeSlider,
-    FloatingPane,
-    Chart, Default, Lines, Pie, ClusteredColumns, Highlight, MoveSlice, Tooltip, Legend, SelectableLegend, Julie, MiamiNice
+    RangeSlider, FloatingPane, Chart, Default, Lines, Pie, ClusteredColumns, Highlight, MoveSlice, Tooltip, Legend, SelectableLegend, Julie, MiamiNice
 ) {
-        //urlUtils.addProxyRule({
-        //    urlPrefix: "https://www.njvoyager.org/arcgis/",
-        //    proxyUrl: "http://ny1-1829l/DotNet/proxy.ashx"
-        //});
-
-        $("input:text,form").attr("autocomplete","off");
-
-
         // Main Map Server and Layers
         var baseURL = 'http://voyager.technology/pinellas/data/'
         // var baseURL = 'https://www.njvoyager.org/arcgis/';
-        var selectionLayersURL = baseURL + 'rest/services/Voyager20180807/MapServer';
-        var mapLayersURL = baseURL + 'rest/services/VoyagerBasemap/MapServer';
-        var segPolyURL = selectionLayersURL + '/0';
-        var unmatchedCrashPolyURL = selectionLayersURL + '/1';
-        var SRIQueryURL = selectionLayersURL + '/1';
-        var countyLayerURL = mapLayersURL + '/4';
-        var cityLayerURL = mapLayersURL + '/3';
+        // var selectionLayersURL = baseURL + 'rest/services/Voyager20180807/MapServer';
+        // var mapLayersURL = baseURL + 'rest/services/VoyagerBasemap/MapServer';
+        // var segPolyURL = selectionLayersURL + '/0';
+        // var unmatchedCrashPolyURL = selectionLayersURL + '/1';
+        // var SRIQueryURL = selectionLayersURL + '/1';
+        // var countyLayerURL = mapLayersURL + '/4';
+        // var cityLayerURL = mapLayersURL + '/3';
 
         // Access SOE Services from ArcGIS Server
-        var baseServiceURL = selectionLayersURL + '/exts/VoyagerSOE/';
-        var crashClustersURL = baseServiceURL + 'CrashClusters';
-        var clusterDetailURL = baseServiceURL + 'ClusterDetail';
-        var canExportURL = baseServiceURL + 'CanExport';
-        var dataExportURL = baseServiceURL + 'ExportData';
-        var crashCountsURL = baseServiceURL + 'CrashCounts';
-        var crashListURL = baseServiceURL + 'CrashList';
-        var crashDetailURL = baseServiceURL + 'CrashDetail';
-        var crashReportsURL = baseServiceURL + 'CrashReports';
-        var crashRecordURL = baseServiceURL + 'CrashRecord';
-        var getPlaceXYURL = baseServiceURL + 'PlaceXY';
+        // var baseServiceURL = selectionLayersURL + '/exts/VoyagerSOE/';
+        // var crashClustersURL = baseServiceURL + 'CrashClusters';
+        // var clusterDetailURL = baseServiceURL + 'ClusterDetail';
+        // var canExportURL = baseServiceURL + 'CanExport';
+        // var dataExportURL = baseServiceURL + 'ExportData';
+        // var crashCountsURL = baseServiceURL + 'CrashCounts';
+        // var crashListURL = baseServiceURL + 'CrashList';
+        // var crashDetailURL = baseServiceURL + 'CrashDetail';
+        // var crashReportsURL = baseServiceURL + 'CrashReports';
+        // var crashRecordURL = baseServiceURL + 'CrashRecord';
+        // var getPlaceXYURL = baseServiceURL + 'PlaceXY';
         var searchURL = baseURL + 'query/lookup_roadway?limit=20&columns=fullname&filter=';
-        var reportURL = baseServiceURL + 'Report';
-        var SRIBreakdownURL = baseServiceURL + 'SRIBreakdown';
-        var crashGraphURL = baseServiceURL + 'CrashGraph';
-        var crashReportsFromPolygonURL = baseServiceURL + 'CrashReportsFromPolygon';
-        var tokenURL = baseURL + 'tokens/generateToken';
+        // var reportURL = baseServiceURL + 'Report';
+        // var SRIBreakdownURL = baseServiceURL + 'SRIBreakdown';
+        // var crashGraphURL = baseServiceURL + 'CrashGraph';
+        // var crashReportsFromPolygonURL = baseServiceURL + 'CrashReportsFromPolygon';
+        // var tokenURL = baseURL + 'tokens/generateToken';
         var requestScheduler;
 
         // Builds the tour at startup for the user's first time using
@@ -637,14 +516,14 @@
 
         mapboxgl.accessToken = 'pk.eyJ1IjoiY29sbGk2NDg1IiwiYSI6ImNrMXNiZHQ1bzBlOTgzY28yMDdsamdncTkifQ.djpUCs34JkPsgWu70lUr_g';
 
-        var baseURL = 'http://voyager.technology/pinellas/data/'
         var map = new mapboxgl.Map({
             container: 'map', // container id
             // style: 'mapbox://styles/mapbox/dark-v10', // stylesheet location
             style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
             // style: 'mapbox://styles/mapbox/satellite-streets-v11', // stylesheet location
             center: [-82.63045481401142,27.89], // starting position [lng, lat]
-            zoom: 10, // starting zoom
+            zoom: 15, // starting zoom
+            // zoom: 10, // starting zoom
             // minZoom: 12,
             logoPosition: 'bottom-right'
         });
@@ -653,6 +532,7 @@
         function updateClusters() {
             if (map.getZoom() >= 13 && map.getZoom() <= 16) {
                 var filterArray = [];
+                var columns = ['eventyear','hsmv','eventonstreet','totalinjuries','highestseverity','pedestrian']
                 var filterConstructor = new FilterConstructor();
                 Object.keys(filterConstructor.content).forEach(function(key) {
                     let value = filterConstructor.content[key];
@@ -670,11 +550,11 @@
 
                 if (map.getLayoutProperty('muni_cluster_layer', 'visibility') === 'visible') {
                     if (map.getSource('crash_cluster_source')){
-                        map.getSource('crash_cluster_source').setData(`${baseURL}v1/geojson/crash_pinellas?geom_column=geom&columns=eventyear,hsmv,eventonstreet&${filter}${bounds}`);
+                        map.getSource('crash_cluster_source').setData(`${baseURL}v1/geojson/crash_pinellas?geom_column=geom&columns=${columns.join(',')}&${filter}${bounds}`);
                     } else {
                         map.addSource('crash_cluster_source', {
                             type: 'geojson',
-                            data: `${baseURL}v1/geojson/crash_pinellas?geom_column=geom&columns=eventyear,hsmv,eventonstreet&${filter}${bounds}`,
+                            data: `${baseURL}v1/geojson/crash_pinellas?geom_column=geom&columns=${columns.join(',')}&${filter}${bounds}`,
                             cluster: true,
                             clusterMaxZoom: 15, // Max zoom to cluster points on
                             clusterRadius: 50, // Radius of each cluster when clustering points (defaults to 50)
@@ -752,6 +632,26 @@
 
 
         map.on('load', function () {
+            function updateFilters() {
+                this.classList.toggle('selected')
+
+                let toggles = document.getElementsByClassName('visualizationToggle selected');
+                let crashLayerFilter = ['in', 'eventyear'];
+
+                for(let i = 0; i < toggles.length; i++)
+                {
+                    let toggle = toggles[i];
+                    let dataLayerValue = toggle.getAttribute('data-layer-value');
+                    let dataLayer = toggle.getAttribute('data-layer');
+
+                    if (toggle.classList.contains('selected')) {
+                        crashLayerFilter.push(parseInt(dataLayerValue));
+                    }
+                }
+
+                map.setFilter('crash_layer', crashLayerFilter)
+                map.setFilter('crash_heatmap', crashLayerFilter)
+            };
 
             map.addSource('muni_cluster_source', {
                 type: 'geojson',
@@ -902,26 +802,19 @@
                 }
             });
 
-
-
-
             map.on('click', function(event) {
                 hideDismissableUIElements(event);
             });
             map.on('moveend', function(event) {
                 updateClusters();
             })
-            map.on('mouseenter', 'route_histogram_layer', function () {
-                map.getCanvas().style.cursor = 'pointer';
-            });
-            map.on('mouseleave', 'route_histogram_layer', function () {
-                map.getCanvas().style.cursor = '';
-            });
+
             map.on('click', 'route_histogram_layer', function (e) {
                 var selectedCrashes = JSON.parse(e.features[0].properties.selectedcrashes);
-                fetch(`${baseURL}query/crash?columns=hsmv,highestseverity,eventlocationonroadway&filter=hsmv in (${selectedCrashes.join(',')})`).then(response => {return response.json()}).then(selectedCrashData => {
+                var columns = ['eventyear','hsmv','eventonstreet','totalinjuries','highestseverity','pedestrian'];
+                fetch(`${baseURL}query/crash_pinellas?columns=${columns.join(',')}&filter=hsmv in (${selectedCrashes.join(',')})`).then(response => {return response.json()}).then(selectedCrashData => {
 
-                    crashGroupingWidget(null, null, selectedCrashData, null);
+                    new CrashGroupingDialog(null, null, selectedCrashData, null);
 
 
                     // var html = '<h5>Crash Information</h5>';
@@ -937,7 +830,40 @@
                     //     .setMaxWidth('400px')
                     //     .setHTML(html)
                     //     .addTo(map);
-               })
+                })
+            });
+            map.on('mouseenter', 'route_histogram_layer', function () {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+            map.on('mouseleave', 'route_histogram_layer', function () {
+                map.getCanvas().style.cursor = '';
+            });
+
+            map.on('click', 'crash_layer', function (e) {
+                var coordinates = e.features[0].geometry.coordinates.slice();
+                fetch(`${baseURL}query/crash?columns=*&filter=hsmv='${e.features[0].properties.hsmv}'`)
+                .then(response => {return response.json()})
+                .then(selectedCrashData => {
+                    var featureData = selectedCrashData[0];
+                    var html = '<div class="clusterTitle">Crash Information</div>';
+                    html += '<div style="overflow-y: scroll; overflow-x: hidden; max-height: 300px;">';
+                    html += '<table class="table table-striped">';
+                    for (var property in featureData) {
+                        if (featureData.hasOwnProperty(property)) {
+                            var value = featureData[property];
+                            if (value) {
+                                html += '<tr><td>' + property + '</td><td>' + value.toString() + '</tr>';
+                            }
+                        }
+                    }
+                    html += '</table></div>';
+
+                    new mapboxgl.Popup({className: 'muniCluster'})
+                    .setLngLat(coordinates)
+                    .setMaxWidth('400px')
+                    .setHTML(html)
+                    .addTo(map);
+                })
             });
             map.on('mouseenter', 'crash_layer', function () {
                 map.getCanvas().style.cursor = 'pointer';
@@ -945,66 +871,43 @@
             map.on('mouseleave', 'crash_layer', function () {
                 map.getCanvas().style.cursor = '';
             });
-            map.on('click', 'crash_layer', function (e) {
-                var coordinates = e.features[0].geometry.coordinates.slice();
-                fetch(`${baseURL}query/crash?columns=*&filter=hsmv='${e.features[0].properties.hsmv}'`)
-                .then(response => {return response.json()})
-                .then(selectedCrashData => {
-                    var featureData = selectedCrashData[0];
-                    var html = '<h5>Crash Information</h5>';
-                    html += '<div style="overflow-y: scroll; overflow-x: hidden; max-height: 300px;">';
-                    html += '<table class="table table-striped">';
-                    for (var property in featureData) {
-                       if (featureData.hasOwnProperty(property)) {
-                           var value = featureData[property];
-                           if (value) {
-                               html += '<tr><td>' + property + '</td><td>' + value.toString() + '</tr>';
-                           }
-                       }
-                    }
-                    html += '</table></div>';
 
-                    new mapboxgl.Popup()
-                       .setLngLat(coordinates)
-                       .setMaxWidth('400px')
-                       .setHTML(html)
-                       .addTo(map);
-               })
-            })
+            map.on('click', 'muni_cluster_layer', function (e) {
+                var clusterProperties = e.features[0].properties;
+                var html = `<div class="clusterTitle">${clusterProperties.mailingcity.toLowerCase()}</div>`;
+                html += `<div style="padding: 5px;">Crashes: ${clusterProperties.cluster_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
+
+                new mapboxgl.Popup({className: 'muniCluster'})
+                    .setLngLat(e.lngLat)
+                    .setMaxWidth('400px')
+                    .setHTML(html)
+                    .addTo(map);
+            });
+            map.on('mouseenter', 'muni_cluster_layer', function () {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+            map.on('mouseleave', 'muni_cluster_layer', function () {
+                map.getCanvas().style.cursor = '';
+            });
+
             map.on('click', 'clusters', function (e) {
                 var crash_cluster_source = map.getSource('crash_cluster_source');
                 var cluster = e.features[0]
                 crash_cluster_source.getClusterLeaves(cluster.id, cluster.properties.point_count, 0, function(err, aFeatures){
-                    console.log('getClusterLeaves', err, aFeatures);
-                    crashGroupingWidget(null, null, aFeatures, null);
+                    new CrashGroupingDialog(null, null, aFeatures.map(crash => { return crash.properties }), null);
                 })
+            });
+            map.on('mouseenter', 'clusters', function () {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+            map.on('mouseleave', 'clusters', function () {
+                map.getCanvas().style.cursor = '';
             });
 
 
             document.querySelectorAll('.visualizationToggle').forEach(element => {
                 element.addEventListener('click', updateFilters);
             });
-
-            function updateFilters() {
-                this.classList.toggle('selected')
-
-                let toggles = document.getElementsByClassName('visualizationToggle selected');
-                let crashLayerFilter = ['in', 'eventyear'];
-
-                for(let i = 0; i < toggles.length; i++)
-                {
-                    let toggle = toggles[i];
-                    let dataLayerValue = toggle.getAttribute('data-layer-value');
-                    let dataLayer = toggle.getAttribute('data-layer');
-
-                    if (toggle.classList.contains('selected')) {
-                        crashLayerFilter.push(parseInt(dataLayerValue));
-                    }
-                }
-
-                map.setFilter('crash_layer', crashLayerFilter)
-                map.setFilter('crash_heatmap', crashLayerFilter)
-            };
         });
 
         // Home Button
@@ -2111,7 +2014,7 @@
         var columnChooser = domConstruct.create('div', {
             className: 'columnChooser resultsFunctionalityButton disabled',
             title: 'Select grid columns to display.',
-            onclick: columnChooserWidget,
+            onclick: function(event) { new ColumnChooser() },
             onmouseenter: function (event) {
                 this.classList.add('orangeButtonToggle')
                 this.classList.remove('whiteButtonToggle')
@@ -3033,26 +2936,26 @@
             //     }
             // }
         }
-        // function sortMapByValue(map, filterValue) {
-        //     // sortMapByValue sorts the contents of map in order by earli-
-        //     // est to latest year. @param {array} map. @return {array} an array of
-        //     var tupleArray = [];
-        //     for (var key in map) tupleArray.push([key, map[key]]);
-        //     if (filterValue === 'year') {
-        //         return tupleArray.sort(function (a, b) { return b[0] - a[0] });
-        //     }
-        //     else if (filterValue === 'acc_dow') {
-        //         sorting = ['M', 'TU', 'W', 'TH', 'F', 'SA', 'SU'];
-        //         return tupleArray.map(function (item) {
-        //             var n = sorting.indexOf(item[0]);
-        //             sorting[n] = '';
-        //             return [n, item]
-        //         }).sort().map(function (j) { return j[1] })
-        //     }
-        //     else {
-        //         return tupleArray.sort(function (a, b) { return b[1] - a[1] });
-        //     }
-        // }
+        function sortMapByValue(map, filterValue) {
+            // sortMapByValue sorts the contents of map in order by earli-
+            // est to latest year. @param {array} map. @return {array} an array of
+            var tupleArray = [];
+            for (var key in map) tupleArray.push([key, map[key]]);
+            if (filterValue === 'year') {
+                return tupleArray.sort(function (a, b) { return b[0] - a[0] });
+            }
+            else if (filterValue === 'acc_dow') {
+                sorting = ['M', 'TU', 'W', 'TH', 'F', 'SA', 'SU'];
+                return tupleArray.map(function (item) {
+                    var n = sorting.indexOf(item[0]);
+                    sorting[n] = '';
+                    return [n, item]
+                }).sort().map(function (j) { return j[1] })
+            }
+            else {
+                return tupleArray.sort(function (a, b) { return b[1] - a[1] });
+            }
+        }
         // function matchMapSort(sortedMap, unsortedMap) {
         //     var tupleArray = [];
         //     for (var i = 0; i < sortedMap.length; i++) {
@@ -3780,7 +3683,7 @@
         //     }, errorHandler);
         //     crashDetailDialog.show();
         // }
-        function columnChooserWidget() {
+        function ColumnChooser() {
             // columnChooseWidget: displays a dialog which allows users to
             // select columns to be displayed in the SRI table via Results Grid
             var columnChooserDialog = new Dialog({
@@ -3852,7 +3755,7 @@
             }
             columnChooserDialog.show();
         };
-        function crashGroupingWidget(SRI, MP, ClusterData, Municipality_Code) {
+        function CrashGroupingDialog(SRI, MP, ClusterData, Municipality_Code) {
             // crashGroupingWidget: displays SRI data and relevant case
             // numbers for a specific milepost. Also breaks down data into categories via
             // pie charts.
@@ -3874,11 +3777,11 @@
                     milepostDetailDialog.destroy();
                     // The crash report selection uses this widget, so if it is active, we want to remove
                     // all the selected geometry and clear the activated color scheme.
-                    if (reportSelectionToggleButton.classList.contains('greenButtonToggle')) {
-                        reportSelectionToggleButton.classList.remove('greenButtonToggle');
-                        reportSelectionToggleButton.classList.remove('orangeButtonToggle');
-                        flatView.graphics.removeAll();
-                    }
+                    // if (reportSelectionToggleButton.classList.contains('greenButtonToggle')) {
+                    //     reportSelectionToggleButton.classList.remove('greenButtonToggle');
+                    //     reportSelectionToggleButton.classList.remove('orangeButtonToggle');
+                    //     flatView.graphics.removeAll();
+                    // }
                 }
             });
             var crashVariableDiv = domConstruct.create('div', {
@@ -3934,7 +3837,7 @@
                     for (var i = 0; i < crashList.length; i++) {
                         var crashDetail = crashList[i];
                         var crashType = crashDetail[applicableFilters.content['DisplayField']]
-                        if (crashType) {
+                        if (typeof crashType === 'string') {
                             var crashTypeList = crashType.split(',');
                             for (var j = 0; j < crashTypeList.length; j++) {
                                 if (crashBins[crashTypeList[j]]) {
@@ -3943,17 +3846,24 @@
                                     crashBins[crashTypeList[j]] = 1;
                                 }
                             }
+                        } else {
+                            if (crashBins[crashType]) {
+                                crashBins[crashType] += 1;
+                            } else {
+                                crashBins[crashType] = 1;
+                            }
                         }
+
                         if (applicableFilters.content.SRI) {
-                            if (crashDetail.Standard_Route_Identifier) {
-                                if (applicableFilters.content.SRI.indexOf(crashDetail.Standard_Route_Identifier) < 0) {
-                                    applicableFilters.content.SRI += ',' + crashDetail.Standard_Route_Identifier;
+                            if (crashDetail.eventonstreet) {
+                                if (applicableFilters.content.SRI.indexOf(crashDetail.eventonstreet) < 0) {
+                                    applicableFilters.content.SRI += ',' + crashDetail.eventonstreet;
                                 }
                             }
                         }
                         else {
-                            if (crashDetail.Standard_Route_Identifier) {
-                                applicableFilters.content.SRI = crashDetail.Standard_Route_Identifier
+                            if (crashDetail.properties.eventonstreet) {
+                                applicableFilters.content.SRI = crashDetail.eventonstreet
                             }
                             else {
                                 applicableFilters.content.SRI = "";
@@ -3981,7 +3891,8 @@
                             });
                         }
                     }
-                    crashList.sort(function (a, b) { return b.year - a.year }); // sorts the grid data by year descending
+                    formattedGridData.sort(function(b,a) { return a.text - b.text });
+                    crashList.sort(function (a, b) { return b.eventyear - a.eventyear }); // sorts the grid data by year descending
                     detailGrid.refresh();
                     detailGrid.renderArray(crashList); // render the sri grid in Results Grid
                     detailGrid.set('sort', [{ property: 'Year', descending: true }])
@@ -4023,16 +3934,28 @@
                     }).play();
                     if (applicableFilters.content.SRI) {
                         var SRIList = applicableFilters.content.SRI.split(',');
-                        if (SRIList.length === 0) {
-                            routeDiv.innerHTML = 'No SRI numbers are present in the cluster currently selected.'
-                        } else if (SRIList.length === 1) {
-                            esriRequest(SRIBreakdownURL, { query: applicableFilters.content }).then(function (routeResponse) {
+                        if (searchOmniInput.value.length > 0) {
+                            var filterArray = [];
+                            var filterConstructor = new FilterConstructor({eventonstreet: `'${searchOmniInput.value}'`});
+                            Object.keys(filterConstructor.content).forEach(function(key) {
+                                let value = filterConstructor.content[key];
+                                if (value) {
+                                    if (value.indexOf(',') >= 0) {
+                                        filterArray.push(`${encodeURIComponent(key)} in (${encodeURIComponent(value)})`);
+                                    }
+                                    else {
+                                        filterArray.push(`${encodeURIComponent(key)} = ${encodeURIComponent(value)}`);
+                                    }
+                                }
+                            });
+                            var filter = `filter=${filterArray.join(' and ')}`;
+                            fetch(`${baseURL}query/crash_pinellas?columns=${applicableFilters.content['BreakdownField']},count(*)&${filter}&group=${applicableFilters.content['BreakdownField']}&sort=${applicableFilters.content['BreakdownField']} desc`).then(response => {return response.json()}).then(selectedCrashData => {
                                 var routeData = [];
-                                var sortedRouteCodes = matchMapSort(crashBins, routeResponse.data.BreakdownList);
-                                if (sortedRouteCodes.length > 9) { sortedRouteCodes = sortedRouteCodes.slice(0, 9); }
-                                for (var i = 0; i < sortedRouteCodes.length; i++) {
-                                    var codeNumber = sortedRouteCodes[i][0];
-                                    var crashVolume = sortedRouteCodes[i][1];
+                                // var sortedRouteCodes = matchMapSort(crashBins, routeResponse.data.BreakdownList);
+                                if (selectedCrashData.length > 9) { selectedCrashData = selectedCrashData.slice(0, 9); }
+                                for (var i = 0; i < selectedCrashData.length; i++) {
+                                    var codeNumber = selectedCrashData[i][applicableFilters.content['BreakdownField']];
+                                    var crashVolume = selectedCrashData[i].count;
                                     getCodeDescription(filterStructure, applicableFilters.content['BreakdownField'], codeNumber, 'SRI');
                                     if (descriptionTest) {
                                         routeData.push({
@@ -4081,19 +4004,117 @@
                                 }).play();
                             }, errorHandler);
                         } else {
-                            routeDiv.innerHTML = 'Multiple SRI numbers are present in the currently selected cluster:<br>' + SRIList.join('<br>');
+                            if (SRIList.length === 0) {
+                                routeDiv.innerHTML = 'No SRI numbers are present in the cluster currently selected.'
+                            } else {
+                                var filterArray = [];
+                                // var filterConstructor = new FilterConstructor();
+                                var filterConstructor = new FilterConstructor({eventonstreet: `'${SRIList.join('\',\'')}'`});
+                                Object.keys(filterConstructor.content).forEach(function(key) {
+                                    let value = filterConstructor.content[key];
+                                    if (value) {
+                                        if (value.indexOf(',') >= 0) {
+                                            filterArray.push(`${encodeURIComponent(key)} in (${encodeURIComponent(value)})`);
+                                        }
+                                        else {
+                                            filterArray.push(`${encodeURIComponent(key)} = ${encodeURIComponent(value)}`);
+                                        }
+                                    }
+                                });
+                                var filter = `filter=${filterArray.join(' and ')}`;
+                                fetch(`${baseURL}query/crash_pinellas?columns=${applicableFilters.content['BreakdownField']},count(*)&${filter}&group=${applicableFilters.content['BreakdownField']}&sort=${applicableFilters.content['BreakdownField']} desc`).then(response => {return response.json()}).then(selectedCrashData => {
+                                    console.log(selectedCrashData);
+                                    var routeData = [];
+                                    if (selectedCrashData.length > 9) { selectedCrashData = selectedCrashData.slice(0, 9); }
+                                    for (var i = 0; i < selectedCrashData.length; i++) {
+                                        var codeNumber = selectedCrashData[i][applicableFilters.content['BreakdownField']];
+                                        var crashVolume = selectedCrashData[i].count;
+                                        getCodeDescription(filterStructure, applicableFilters.content['BreakdownField'], codeNumber, 'SRI');
+                                        if (descriptionTest) {
+                                            routeData.push({
+                                                y: crashVolume,
+                                                text: descriptionTest.description,
+                                            });
+                                        }
+                                        else {
+                                            routeData.push({
+                                                y: crashVolume,
+                                                text: codeNumber,
+                                            });
+                                        }
+                                    }
+                                    var routeChart = new Chart(routeDiv);
+                                    routeChart.addPlot('default', {
+                                        type: Pie,
+                                        labels: false,
+                                        ticks: false,
+                                        fixed: true,
+                                        precision: 1,
+                                        labelStyle: 'default',      // default/columns/rows/auto
+                                        htmlLabels: true,            // use HTML to draw labels
+                                        radius: 90
+                                    });
+                                    routeChart.setTheme(Julie);
+                                    routeChart.addAxis('x');
+                                    routeChart.addAxis('y', { vertical: true });
+                                    routeChart.addSeries('Series A', routeData);
+                                    var tip = new Tooltip(routeChart, 'default', {
+                                        text: function (o) {
+                                            return o.chart.series[0].data[o.index].text + ': ' + o.y;
+                                        }
+                                    })
+                                    var mag2 = new dojox.charting.action2d.MoveSlice(routeChart, 'default');
+                                    fx.animateProperty({
+                                        node: routeLoadSpinner,
+                                        duration: 500,
+                                        properties: {
+                                            opacity: 0
+                                        },
+                                        onEnd: function () {
+                                            domConstruct.destroy(routeLoadSpinner);
+                                            routeChart.render();
+                                        }
+                                    }).play();
+                                }, errorHandler);
+                            }
                         }
+
+
+
+                        // else {
+                        //     if (SRIList.length > 10) {
+                        //         routeDiv.innerHTML = 'Multiple SRI numbers are present in the currently selected cluster:<br>' + SRIList.slice(0,10).join('<br>');
+                        //     } else {
+                        //         routeDiv.innerHTML = 'Multiple SRI numbers are present in the currently selected cluster:<br>' + SRIList.join('<br>');
+                        //     }
+                        // }
                     }
                     else {
                         routeDiv.innerHTML = 'No SRI numbers are present in the currently selected cluster.';
                     }
                     applicableFilters.content['SRI'] = 'STATE';
-                    esriRequest(SRIBreakdownURL, { query: applicableFilters.content }).then(function (stateResponse) {
-                        var sortedStateCodes = matchMapSort(crashBins, stateResponse.data.BreakdownList)
+
+                    var filterArray = [];
+                    var filterConstructor = new FilterConstructor();
+                    Object.keys(filterConstructor.content).forEach(function(key) {
+                        let value = filterConstructor.content[key];
+                        if (value) {
+                            if (value.indexOf(',') >= 0) {
+                                filterArray.push(`${encodeURIComponent(key)} in (${encodeURIComponent(value)})`);
+                            }
+                            else {
+                                filterArray.push(`${encodeURIComponent(key)} = ${encodeURIComponent(value)}`);
+                            }
+                        }
+                    });
+                    var filter = `filter=${filterArray.join(' and ')}`;
+                    fetch(`${baseURL}query/crash_pinellas?columns=${applicableFilters.content['BreakdownField']},count(*)&${filter}&group=${applicableFilters.content['BreakdownField']}&sort=${applicableFilters.content['BreakdownField']} desc`).then(response => {return response.json()}).then(selectedCrashData => {
+                        console.log(selectedCrashData)
+                        // var sortedStateCodes = matchMapSort(crashBins, stateResponse.data.BreakdownList)
                         var stateData = [];
-                        for (var i = 0; i < sortedStateCodes.length; i++) {
-                            var codeNumber = sortedStateCodes[i][0];
-                            var crashVolume = sortedStateCodes[i][1];
+                        for (var i = 0; i < selectedCrashData.length; i++) {
+                            var codeNumber = selectedCrashData[i][applicableFilters.content['BreakdownField']];
+                            var crashVolume = selectedCrashData[i].count;
                             getCodeDescription(filterStructure, applicableFilters.content['BreakdownField'], codeNumber, 'NJ');
                             if (descriptionTest) {
                                 stateData.push({
@@ -4140,7 +4161,10 @@
                                 stateChart.render();
                             }
                         }).play();
-                    }, errorHandler);
+                    })
+                    // esriRequest(SRIBreakdownURL, { query: applicableFilters.content }).then(function (stateResponse) {
+
+                    // }, errorHandler);
                 }
                 function downloadReportsWidget(Crashes, attachPoint) {
                     var crashesWithReport = Crashes.filter(function (cluster) { return cluster.Directory; });
@@ -4200,7 +4224,7 @@
                 }
                 if (ClusterData) {
                     var onlyUnique = function (value, index, self) { return self.indexOf(value) === index; }
-                    var result = ClusterData.map(function (a) { if (!(a.properties.eventonstreet === null)) { return a.properties.eventonstreet } });
+                    var result = ClusterData.map(function (a) { if (!(a.eventonstreet === null)) { return a.eventonstreet } });
                     var unique = result.filter(onlyUnique);
 
                     downloadReportsWidget(ClusterData, controlsDiv);
@@ -4215,7 +4239,7 @@
                         compareDataScales(ClusterData.Crashes);
                     } else {
                         applicableFilters.content.SRI = unique.toString();
-                        compareDataScales(ClusterData.Crashes);
+                        compareDataScales(ClusterData);
                         console.error('More than one SRI is specified in this cluster information.');
                     }
                 }
@@ -4245,23 +4269,29 @@
             }, crashVariableDiv);
             var stateLabel = domConstruct.create('div', {
                 className: 'detailGridLabel',
-                innerHTML: 'State Breakdown'
+                innerHTML: 'County Breakdown'
             }, crashVariableDiv);
             var addSelectValues = function (selectValues, attachPoint) {
                 for (var i = 0; i < selectValues.length; i++) {
-                    domConstruct.create('option', { value: selectValues[i].value, innerHTML: selectValues[i].label }, attachPoint);
+                    domConstruct.create('option', {
+                        value: selectValues[i].value,
+                        innerHTML: selectValues[i].label
+                    }, attachPoint);
+
+                    if (selectValues[i].selected === true) {
+                        attachPoint.selectedIndex = i;
+                    }
                 }
             };
             var selectValues = [
                 { label: 'Crash Type', value: 'crash_type', displayField: 'Crash_Type' },
                 { label: 'Road Condition', value: 'surf_cond_code', displayField: 'Road_Surface_Condition' },
                 { label: 'Road Median Type', value: 'road_median_code', displayField: 'Road_Median_Type' },
-                { label: 'Year', value: 'year', displayField: 'Year' },
+                { label: 'Year', value: 'eventyear', displayField: 'eventyear', selected: true },
                 { label: 'Week Day', value: 'acc_dow', displayField: 'Day_of_Week' },
                 { label: 'Environmental Condition', value: 'environ_cond_code', displayField: 'Environmental_Condition' },
                 { label: 'Road Characteristic', value: 'road_char_code', displayField: 'Road_Characteristic' },
-                { label: 'Road Surface Condition', value: 'surf_cond_code', displayField: 'Road_Surface_Condition' },
-                //{ label: 'Traffic Volume', value: '', displayField: 'trfc_vlm_code' }, // no such field in ARD
+                { label: 'Highest Severity', value: 'highestseverity', displayField: 'highestseverity' },
                 { label: 'Department Type', value: 'dept_num', displayField: 'Police_Department_Type' },
                 { label: 'Ramp Direction', value: 'ramp_direction', displayField: 'Ramp_Direction' },
                 { label: 'Light Condition', value: 'light_cond_code', displayField: 'Light_Condition' }
@@ -4273,7 +4303,7 @@
             }, milepostDetailDialog.containerNode);
             var controlsDiv = domConstruct.create('div', {
                 className: 'fullSpan',
-                style: 'height: 17px; padding: 7px 7px; width: 830px; background-color: lightgrey; border-radius: 5px; border: 1px solid rgb(169, 169, 169); margin-bottom: 4px;'
+                style: 'height: 34px; padding: 7px 7px; width: 830px; background-color: lightgrey; border-radius: 5px; border: 1px solid rgb(169, 169, 169); margin-bottom: 4px;'
             }, milepostDetailDialog.containerNode);
             var crashVariableSelector = domConstruct.create('select', {
                 className: '',
@@ -4298,19 +4328,20 @@
                     return object.Document_Locator_Number
                 }
             }
+            var columns = ['eventyear','hsmv','eventonstreet','totalinjuries','highestseverity','pedestrian'];
 
             var detailGrid = new Grid({
                 //sort: [{ "property": "Year", "descending": true }],
                 columns: [
-                    { label: 'Case Number', field: 'Case_Number' },   // updated data grid to use ARD  s.g.
                     {
-                        label: 'DLN',
-                        formatter: formatFunction
+                        label: 'HSMV', field: 'hsmv'
+                        // formatter: formatFunction
                     },
-                    { label: 'Year', field: 'Year' },
-                    { label: 'Day of Week', field: 'Day_of_Week' },
-                    { label: 'SRI', field: 'Standard_Route_Identifier' },
-                    { label: 'MP', field: 'Milepost' }
+                    { label: 'Year', field: 'eventyear' },   // updated data grid to use ARD  s.g.
+                    { label: 'Location', field: 'eventonstreet' },
+                    { label: 'Injuries', field: 'totalinjuries' },
+                    { label: 'Severity', field: 'highestseverity' },
+                    { label: 'Pedestrian', field: 'pedestrian' }
                 ],
             }, gridDiv);
             // grid styling for hover effects
@@ -4333,13 +4364,15 @@
                 }
             });
             addSelectValues(selectValues, crashVariableSelector);
-            // if (String(MP).indexOf('MUNI:') >= 0) {
-            //     this.filter = new FilterConstructor({ 'SRI': SRI, 'Muni': MP, 'BreakdownField': crashVariableSelector.value, 'DisplayField': selectValues[crashVariableSelector.selectedIndex].displayField });
-            // }
-            // else {
-            //     this.filter = new FilterConstructor({ 'SRI': SRI, 'MilePost': MP, 'BreakdownField': crashVariableSelector.value, 'DisplayField': selectValues[crashVariableSelector.selectedIndex].displayField });
-            // }
+            if (String(MP).indexOf('MUNI:') >= 0) {
+                this.filter = new FilterConstructor({ 'SRI': SRI, 'Muni': MP, 'BreakdownField': crashVariableSelector.value, 'DisplayField': selectValues[crashVariableSelector.selectedIndex].displayField });
+            }
+            else {
+                this.filter = new FilterConstructor({ 'SRI': SRI, 'MilePost': MP, 'BreakdownField': crashVariableSelector.value, 'DisplayField': selectValues[crashVariableSelector.selectedIndex].displayField });
+            }
             refreshStatistics(this.filter);
+
+
         }
         // function crashClusterWidget(crashData) {
         //     // crashClusterWidget: dialog that displays rows of crashes w-
@@ -4407,7 +4440,7 @@
         //         }
         //     }, attachPoint);
         // }
-        function locationFilterWidget(filterInfo) {
+        function LocationFilter(filterInfo) {
             // locationFilterWidget: creates the widget that displays SRI,\
             // min and max MP after an SRI search. creates buttons to clear min and max
             // MP, and updates the SRI data if min/max MP are specified.
@@ -4939,9 +4972,9 @@
         }
         function orderMagnitudeStopsHeight(propertyArray, power, shift) {
             var propertyMin = 0;
-            var propertyMax = 250;
+            var propertyMax = 2500;
 
-            if (propertyArray.length > 1) {
+            if (propertyArray.length > 300) {
                 var minValue = Math.min.apply(Math, propertyArray);
                 var maxValue = Math.max.apply(Math, propertyArray);
 
@@ -4965,11 +4998,36 @@
                 //     });
                 // }
 
-                steps.push([maxValue, propertyMax]);
+                steps.push([maxValue, 10000]);
+
+                return steps;
+            } else if (propertyArray.length > 100) {
+                var minValue = Math.min.apply(Math, propertyArray);
+                var maxValue = Math.max.apply(Math, propertyArray);
+
+                var steps = [[minValue, propertyMin]];
+
+                steps.push([maxValue, 2500]);
+
+                return steps;
+            } else if (propertyArray.length > 50) {
+                var minValue = Math.min.apply(Math, propertyArray);
+                var maxValue = Math.max.apply(Math, propertyArray);
+
+                var steps = [[minValue, propertyMin]];
+
+                steps.push([maxValue, 1250]);
 
                 return steps;
             } else if (propertyArray.length > 0) {
-                return [[propertyArray[0], propertyMax]];
+                var minValue = Math.min.apply(Math, propertyArray);
+                var maxValue = Math.max.apply(Math, propertyArray);
+
+                var steps = [[minValue, propertyMin]];
+
+                steps.push([maxValue, 500]);
+
+                return steps;
             } else {
                 return [];
             }
@@ -4977,8 +5035,8 @@
         function setNewFillExtrusionSymbology(data, layer, attribute) {
             if (data.features && data.features.length > 0) {
                 var propertyValues = data.features.map(feature => feature.properties[attribute]);
-                var power = attribute === 'project_count' ? 0.5 : 0.9;
-                var shift = attribute === 'project_count' ? 1 : 3;
+                var power = attribute === 'count' ? 0.5 : 0.9;
+                var shift = attribute === 'count' ? 1 : 3;
 
                 var minValue = Math.min.apply(Math, propertyValues);
                 var maxValue = Math.max.apply(Math, propertyValues);
@@ -5411,8 +5469,23 @@
                         var route_histogram_source = map.getSource('route_histogram_source');
                         var route_histogram_layer = map.getLayer('route_histogram_layer');
 
+                        var filterArray = [];
+                        // var filterConstructor = new FilterConstructor();
+                        var filterConstructor = new FilterConstructor();
+                        Object.keys(filterConstructor.content).forEach(function(key) {
+                            let value = filterConstructor.content[key];
+                            if (value) {
+                                if (value.indexOf(',') >= 0) {
+                                    filterArray.push(`${encodeURIComponent(key)} in (${encodeURIComponent(value)})`);
+                                }
+                                else {
+                                    filterArray.push(`${encodeURIComponent(key)} = ${encodeURIComponent(value)}`);
+                                }
+                            }
+                        });
+                        var filter = `filter=${filterArray.join(' and ')}`;
 
-                        fetch(`${baseURL}routeHistogram/centerline_buffer?geom_column=wkb_geometry&routeName=${attributes.fullname}`).then(response => {return response.json()}).then(centerlineFeatures => {
+                        fetch(`${baseURL}routeHistogram/centerline_buffer?geom_column=wkb_geometry&routeName=${attributes.fullname}&${filter}`).then(response => {return response.json()}).then(centerlineFeatures => {
                             query('.searchHanger').forEach(function (node) { domClass.add(node, 'hidden') });
                             if (loadSpinner) {
                                 if (loadSpinner.classList) {

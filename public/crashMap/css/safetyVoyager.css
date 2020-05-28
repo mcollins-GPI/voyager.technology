@@ -189,7 +189,21 @@ select {
     text-decoration: none;
 }
 
+.muniCluster .mapboxgl-popup-content{
+    padding: 0;
 
+
+}
+.clusterTitle{
+    padding: 5px 25px 5px 5px;
+    font-weight: bold;
+    background-color: grey;
+    text-transform: capitalize
+}
+
+.field-eventonstreet{
+    width: 300px;
+}
 #homeButton{
     position: absolute;
     top: 15px;
