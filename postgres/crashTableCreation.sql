@@ -253,10 +253,11 @@ eventday = EXTRACT(DAY FROM timestamp 'epoch' + eventcrashdate * interval '1 ms'
 CREATE EXTENSION postgis;
 SELECT AddGeometryColumn('crash', 'geom', 4326, 'POINT', 2);
 UPDATE crash SET geom = ST_SetSRID(ST_MakePoint(EventDD_X, EventDD_Y), 4326);
-CREATE INDEX ON crash USING GIST (geom);
-CREATE INDEX ON crash(hsmv);
-CREATE INDEX ON crash(eventyear);
 
+CREATE INDEX ON crash USING GIST (geom);
+CREATE INDEX ON crash_pinellas(eventyear);
+CREATE INDEX ON crash_pinellas(highestseverity);
+CREATE INDEX ON crash_pinellas(hsmv);
 
 -- create an index for case-insensitive searches on the lookup table
 CREATE INDEX ON lookup_roadway (lower(fullname));

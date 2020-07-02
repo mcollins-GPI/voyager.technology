@@ -522,8 +522,8 @@
             style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
             // style: 'mapbox://styles/mapbox/satellite-streets-v11', // stylesheet location
             center: [-82.63045481401142,27.89], // starting position [lng, lat]
-            zoom: 15, // starting zoom
-            // zoom: 10, // starting zoom
+            // zoom: 15, // starting zoom
+            zoom: 10, // starting zoom
             // minZoom: 12,
             logoPosition: 'bottom-right'
         });
@@ -841,7 +841,7 @@
 
             map.on('click', 'crash_layer', function (e) {
                 var coordinates = e.features[0].geometry.coordinates.slice();
-                fetch(`${baseURL}query/crash?columns=*&filter=hsmv='${e.features[0].properties.hsmv}'`)
+                fetch(`${baseURL}query/crash_pinellas?columns=*&filter=hsmv='${e.features[0].properties.hsmv}'`)
                 .then(response => {return response.json()})
                 .then(selectedCrashData => {
                     var featureData = selectedCrashData[0];
@@ -904,6 +904,38 @@
                 map.getCanvas().style.cursor = '';
             });
 
+            map.on('click', 'cluster_individual', function (e) {
+                var coordinates = e.features[0].geometry.coordinates.slice();
+                fetch(`${baseURL}query/crash_pinellas?columns=*&filter=hsmv='${e.features[0].properties.hsmv}'`)
+                .then(response => {return response.json()})
+                .then(selectedCrashData => {
+                    var featureData = selectedCrashData[0];
+                    var html = '<div class="clusterTitle">Crash Information</div>';
+                    html += '<div style="overflow-y: scroll; overflow-x: hidden; max-height: 300px;">';
+                    html += '<table class="table table-striped">';
+                    for (var property in featureData) {
+                        if (featureData.hasOwnProperty(property)) {
+                            var value = featureData[property];
+                            if (value) {
+                                html += '<tr><td>' + property + '</td><td>' + value.toString() + '</tr>';
+                            }
+                        }
+                    }
+                    html += '</table></div>';
+
+                    new mapboxgl.Popup({className: 'muniCluster'})
+                        .setLngLat(coordinates)
+                        .setMaxWidth('400px')
+                        .setHTML(html)
+                        .addTo(map);
+                })
+            });
+            map.on('mouseenter', 'cluster_individual', function () {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+            map.on('mouseleave', 'cluster_individual', function () {
+                map.getCanvas().style.cursor = '';
+            });
 
             document.querySelectorAll('.visualizationToggle').forEach(element => {
                 element.addEventListener('click', updateFilters);
